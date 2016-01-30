@@ -1,0 +1,12 @@
+{
+  "presets": ["es2015"],
+  "plugins": [
+    "syntax-function-bind",
+    "transform-function-bind",
+    ["module-alias", [
+      {"src": "./src/util", "expose": "util"},
+      {"src": "./src/create", "expose": "create"},
+      {"src": "./src/operator", "expose": "operator"},
+    ]]
+  ]
+}
