@@ -56,7 +56,7 @@ describe('from', () => {
     setTimeout(() => {
       assert.strictEqual(called, 4)
       done()
-    })
+    }, 1)
   })
 
   it('should accept an observer with only `next` method', () => {
