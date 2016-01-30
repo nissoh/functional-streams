@@ -36,7 +36,7 @@ describe('from', () => {
     assert.strictEqual(called, 3)
   })
 
-  it('should accept an observer', done => {
+  it('should accept an observer', () => {
     let called = 0
     assert.doesNotThrow(() => {
       const s = from([1, 2, 3])
@@ -50,13 +50,10 @@ describe('from', () => {
         complete: x => {
           assert.strictEqual(x, 3)
           ++called
+          assert.strictEqual(called, 4)
         },
       })
     })
-    setTimeout(() => {
-      assert.strictEqual(called, 4)
-      done()
-    }, 1)
   })
 
   it('should accept an observer with only `next` method', () => {
